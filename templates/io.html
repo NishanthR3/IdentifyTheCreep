@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, intial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/style_input_output.css') }}" type="text/css">
+    <title>My Page</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 id="title">Audio Moss</h1>
+            <!--<a href="/" id="log">Log out</a>-->
+            <a href="/dashboard" id="log">dashboard</a>
+        </div>
+        {% block content%}
+        {% endblock %}
+    </div>
+</body>
+</html>

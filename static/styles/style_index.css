@@ -1,0 +1,95 @@
+body, html
+{
+    margin:0;
+    padding:0;
+    font-family: "Whitney SSm A", "Whitney SSm B", "Avenir", "Segoe UI", "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: DimGrey;
+}
+.container
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10vh 70vh 60vh;
+    grid-template-areas:
+        "header header"
+        "form_main form_main"
+        "about_main_1 about_main_2"
+}
+.header
+{
+    display: grid;
+    grid-area: header;
+    background-color: white;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 1fr;
+    text-align: center;
+    overflow: hidden;
+}
+.header > a
+{
+    padding: 1vh 0 1vh 0;
+    border: 1px solid DodgerBlue;
+    border-radius: 5px;
+    height: 50%;
+    width: 50%;
+    margin: 1vh 3vw;
+    padding: 2vh 0 0 0;
+}
+#title
+{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    font-size: 4.5vh;
+}
+#log
+{
+    grid-column-start: 8;
+    grid-column-end: 9;
+    background-color: DodgerBlue;
+    color: white;
+    text-decoration: none;
+    opacity: 0.9;
+    font-size: 2.5vh;
+}
+#log:hover
+{
+    opacity: 1;
+}
+.form_main
+{
+    grid-area: form_main;
+    border-bottom: 1px solid LightGray;
+    border-top: 1px solid LightGray;
+    text-align: center;
+    background-image: url(../images/waveform.png);
+    background-size: contain;
+    color: white;
+    padding: 8vh 0 0 8vh;
+    overflow: hidden;
+}
+.about_main_1
+{
+    padding: 10vh 0 0 0;
+    grid-area: about_main_1;
+    border-right: 1px solid LightGray;
+    text-align: center;
+}
+.about_main_2
+{
+    padding: 10vh 0 0 0;
+    grid-area: about_main_2;
+    text-align: center;
+}
+input[type="text"], input[type="submit"], input[type="password"]
+{
+    box-shadow: inset 0 1px 2px rgba(151,159,175,0.1), inset 0 1px 15px rgba(151,159,175,0.05);
+    border-radius: 5px;
+    border: 1px solid gray;
+    width:25vw;
+    padding: 1vh 1vw 1vh 1vw;
+}
+input[type="submit"]
+{
+    background-color: DodgerBlue;
+    color: white;
+}

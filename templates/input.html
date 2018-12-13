@@ -1,0 +1,10 @@
+{% extends 'io.html' %}
+{% block content %}
+<form method="post" class="main" action="/output" enctype=multipart/form-data>
+    <label for="file1">Select first file</label><br>
+    <input type="file" name="file1" accept=".mp3, .wav, .ogg, .m4a" id="file1" required><br><br>
+    <label for="file2">Select second file</label><br>
+    <input type="file" name="file2" accept=".mp3, .wav, .ogg,.m4a" id="file2" required><br><br>
+    <input type="submit"><br><br>
+</form>
+{% endblock %}

@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+   <h2 style = "text-align: center;">{{ message }}</h2>
+   <body link="blue">
+    <fieldset>
+      <legend>User Details</legend>
+      <table border = 1 cellspacing=5 width=50% height=50px bgcolor="#ffff9f">
+        <tr>
+	    <th>S.No</td>
+            <th>Similarity</td>
+            <th>file1</td>
+            <th>file2</td>
+         </tr>
+
+         {% for row in rows if row[2] %}
+            <tr>
+               <td> {{loop.index}}</td>
+               <td>{{row[0]}}</td>
+               <td>{{row[1]}}</td>
+               <td>{{row[2]}}</td>
+            </tr>
+	 {% else %}
+	    <h1>no user found!</h1>
+         {% endfor %}
+      </table>
+      <fieldset>
+      <br><a href = "/">Go back to home page</a>
+   </body>
+</html>

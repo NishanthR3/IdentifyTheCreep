@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, intial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/style_dashboard.css') }}" type="text/css">
+    <title>My Page</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 id="title">Audio Moss</h1>
+            {% if name %}
+            <h2 id="welcome">Welcome {{name}}</h2>
+            {% else %}
+            <h2 id="welcome">Welcome user</h2>
+            {% endif %}
+            <a href="/logout" id="log">Log out</a>
+        </div>
+        <div class="left" onclick="location.href='/showall'">
+            <h1>Past Submissions</h1>
+        </div>
+        <div class="right" onclick="location.href='/input'">
+            <h1>Compare Files</h1>
+        </div>
+    </div>
+</body>
+</html>

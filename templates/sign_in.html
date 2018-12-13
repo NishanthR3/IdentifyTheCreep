@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, intial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/style_signin_logout.css') }}" type="text/css">
+  <title>My Page</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Audio Moss</h1>
+    <form method="post" action="/dashboard">
+      <input type="text" placeholder="Username" name="username" required><br><br>
+      <input type="password" placeholder="Password" name="password" required><br><br>
+      <input type="submit" value="Log In"><br><br>
+    </form>
+    {% if failed %}
+    <h3 style="color: red">Failed auth</h3> {% endif %}
+  </div>
+</body>
+
+</html>

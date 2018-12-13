@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, intial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/style_index.css') }}" type="text/css">
+    <title>My Page</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 id="title">Audio Moss</h1>
+            <a href="/sign_in" id="log">Log in</a>
+        </div>
+        <div class="form_main">
+            <h1>Sign Up. Upload. Compare.</h1>
+            <form method="post" action="/">
+                <input type="text" placeholder="Username" name="username" required><br><br>
+                <input type="password" placeholder="Password" name="password" required><br><br>
+                <input type="checkbox" id="terms" required>
+                <label for="terms">I agree to terms and conditions</label><br><br>
+                <input type="submit" value="Sign Up">
+            </form>
+            {% if failed %}
+            <h3 style="color: red">Username exists</h3>
+            {% endif %}
+            {% if success %}
+            <h3 style="color: red">Username registered!</h3>
+            {% endif %}
+            {% if error %}
+            <h3 style="color: red">Register Error</h3>
+            {% endif %}
+        </div>
+        <div class="about_main_1">
+            <img src="{{ url_for('static',filename='images/note.png') }}" width="50px">
+            <h2 style="color: DodgerBlue">Find similarities between 2 audio files</h2>
+            <p>Using advanced machine learning algorithms we <br>find the percentage
+                similarity between two audio file</p>
+        </div>
+        <div class="about_main_2">
+            <img src="{{ url_for('static',filename='images/list.png') }}" width="50px">
+            <h2 style="color: DodgerBlue">View your submission history</h2>
+            <p>We keep track of your submission history which
+                you can view anytime</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{% extends 'io.html' %}
+{% block content %}
+<div class="main">
+    <h2>The Percentage match between {{file1}} and {{file2}} is:</h2>
+    {% if percentage %}
+    <h1 style="color:DodgerBlue">{{percentage}}%</h1>
+    {% else %}
+    <h1 style="color:DodgerBlue">Couldn't Calculate</h1>
+    {% endif %}
+</div>
+{% endblock %}
